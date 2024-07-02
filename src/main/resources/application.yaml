@@ -1,0 +1,35 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  jwt:
+    secret: 99ee8ee2a70f18618d00630f78ab9c9c940ab359edf06aeefd358937e3f1b5f67a29aac1378c1ac4cac865a2e620850e872465560151c1966e32ea34112488ce
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+
+
+logging:
+  level:
+    root: info
